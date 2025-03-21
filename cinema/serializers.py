@@ -33,8 +33,8 @@ class ActorSerializer(serializers.ModelSerializer):
         model = Actor
         fields = ("id", "first_name", "last_name", "full_name")
 
-    def get_full_name(self, obj):
-        return f"{obj.first_name} {obj.last_name}"
+    def get_full_name(self, name):
+        return f"{name.first_name} {name.last_name}"
 
 
 class MovieSerializer(serializers.ModelSerializer):
@@ -44,7 +44,8 @@ class MovieSerializer(serializers.ModelSerializer):
                   "title",
                   "description",
                   "duration",
-                  "genres", "actors"
+                  "genres",
+                  "actors"
                   )
 
 
