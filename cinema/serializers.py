@@ -82,8 +82,8 @@ class MovieSessionListSerializer(serializers.ModelSerializer):
                   "cinema_hall_capacity"
                   )
 
-    def get_cinema_hall_capacity(self, odj):
-        return odj.cinema_hall.capacity
+    def get_cinema_hall_capacity(self, capacity):
+        return capacity.cinema_hall.capacity
 
 
 class MovieSessionRetrieveSerializer(serializers.ModelSerializer):
